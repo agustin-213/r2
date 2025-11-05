@@ -1,3 +1,14 @@
+// lista.js
+document.addEventListener("DOMContentLoaded", () => {
+    const boton = document.querySelector(".boton-agregar");
+    
+    boton.addEventListener("click", () => {
+      // Redirige a la página index.html
+      window.location.href = "index.html";
+    });
+  });
+  
+
 //Importamos los modulos necesarios de firebase
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
 //Modulos de la base de datos: Cada uno de estos modulos nos permite realizar diferentes operaciones en la base de datos
@@ -51,6 +62,7 @@ onValue(refEstudiantes, (datos) => {
             <td>${estudiantes[dni].apellido}</td>
             <td>${estudiantes[dni].nombre}</td>
             <td>${estudiantes[dni].edad}</td>
+            <td>${estudiantes[dni].nota}</td>
         </tr>
         `;
         

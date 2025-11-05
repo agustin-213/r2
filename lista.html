@@ -1,27 +1,125 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista estudiantes</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📋 Lista de Estudiantes</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: radial-gradient(circle at top, #1a1a1a, #0c0c0c);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      background: #a81414;
+      text-align: center;
+      padding: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    .lista {
+      background: #1b1b1b;
+      border-radius: 15px;
+      padding: 30px;
+      margin: 40px auto;
+      max-width: 800px;
+      width: 90%;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    thead {
+      background: #a81414;
+      color: #fff;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #333;
+    }
+
+    tbody tr {
+      background: #222;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    tbody tr:hover {
+      background: #3a1c1c;
+      transform: scale(1.02);
+    }
+
+    th {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #888;
+      background: #111;
+      width: 100%;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+
+    /* Botón opcional */
+    .boton-agregar {
+      margin-bottom: 20px;
+      background: #a81414;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .boton-agregar:hover {
+      background: #8c0f0f;
+    }
+
+  </style>
 </head>
 <body>
-    <h1>Lista de Estudiantes</h1>
-    <div class="lista">
-        <table>
-            <thead>
-                <tr>
-                    <th>DNI</th>
-                    <th>Apellido</th>
-                    <th>Nombre</th>
-                    <th>Edad</th>
-                </tr>
-            </thead>
-            <tbody class="tabla-estudiantes">
-                <!-- Las filas de la tabla se agregarán aquí dinámicamente -->
-            </tbody>
-        </table>
-    </div>
+  <header>📋 Lista de Estudiantes</header>
+
+  <div class="lista">
+    <button class="boton-agregar">➕ Agregar Estudiante</button>
+    <table>
+      <thead>
+        <tr>
+          <th>DNI</th>
+          <th>Apellido</th>
+          <th>Nombre</th>
+          <th>Edad</th>
+          <th>Nota</th>
+        </tr>
+      </thead>
+      <tbody class="tabla-estudiantes">
+        <!-- Filas dinámicas -->
+      </tbody>
+    </table>
+  </div>
+
+  <footer>Hecho con ❤️ por el equipo de desarrollo</footer>
+
+  <script src="lista.js" type="module"></script>
 </body>
-<script src="lista.js" type="module"></script>
 </html>
