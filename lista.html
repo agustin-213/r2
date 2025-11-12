@@ -35,6 +35,22 @@
       width: 90%;
       box-shadow: 0 0 15px rgba(0,0,0,0.5);
     }
+    .volver {
+          margin-bottom: 20px;
+          background: #a81414;
+          color: #fff;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 10px;
+          font-size: 16px;
+          cursor: pointer;
+          transition: background 0.3s;
+        }
+    
+        .volver:hover {
+          background: #8c0f0f;
+        }
+    
 
     table {
       width: 100%;
@@ -102,6 +118,7 @@
 
   <div class="lista">
     <button class="boton-agregar">➕ Agregar Estudiante</button>
+    <button class="volver" onclick="window.location.href='undato.html'">⬅ Ir al repertorio📝</button>
     <table>
       <thead>
         <tr>
@@ -109,7 +126,6 @@
           <th>Apellido</th>
           <th>Nombre</th>
           <th>Edad</th>
-          <th>Nota</th>
         </tr>
       </thead>
       <tbody class="tabla-estudiantes">

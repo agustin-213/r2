@@ -41,7 +41,7 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
 //Referenciamos el elemento del DOM donde mostraremos la lista de tareas
-let tabla = document.querySelector(".tabla-estudiantes");
+let tabla = document.querySelector(".tabla-notas");
 
 // 🔹 Creamos una referencia a la rama "estudiantes"
 const refEstudiantes = ref(db, "estudiantes");
@@ -58,10 +58,8 @@ onValue(refEstudiantes, (datos) => {
     for (let dni in estudiantes) {
         tabla.innerHTML += `
         <tr>
-            <td>${dni}</td>
-            <td>${estudiantes[dni].apellido}</td>
-            <td>${estudiantes[dni].nombre}</td>
-            <td>${estudiantes[dni].edad}</td>
+        <td>${dni}</td>
+        <td>${estudiantes[dni].nota}</td>
         </tr>
         `;
         
